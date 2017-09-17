@@ -4,11 +4,11 @@ Crypto projects in python, projects in  PyCharm community edition
  
 ### Attacks
    Vigenere ,
-     Hip Replacement  ,
-     Vernam cipher  ,
-     Zip Files
+   Hip Replacement  ,
+   Vernam cipher  ,
+   Zip Files
    
 ### Encryptions
    RC4  ,
-     ,Feistel cipher
+   Feistel cipher
  
