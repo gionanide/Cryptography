@@ -8,7 +8,11 @@ Crypto projects in python, projects in  PyCharm community edition
    Vernam cipher  ,
    Zip Files
    
-### Encryptions
+### Encryptions/Decryptions
    RC4  ,
-   Feistel cipher
+   Feistel cipher ,
+   Superincreasing Knapsac
+   
+
+   
  
