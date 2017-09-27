@@ -11,8 +11,10 @@ Crypto projects in python, projects in  PyCharm community edition
 ### Encryptions/Decryptions
    RC4  ,
    Feistel cipher ,
-   Superincreasing Knapsac
+   Superincreasing Knapsac ,
+   Elliptic Curve Cryptography
    
+
 
    
  
