@@ -6,7 +6,8 @@ Crypto projects in python, projects in  PyCharm community edition
    Vigenere ,
    Hip Replacement  ,
    Vernam cipher  ,
-   Zip Files
+   Zip Files ,
+   RSA
    
 ### Encryptions/Decryptions
    RC4  ,
@@ -14,9 +15,10 @@ Crypto projects in python, projects in  PyCharm community edition
    Superincreasing Knapsac ,
    Elliptic Curve Cryptography
    
-### Key Exchange
+### Implementations
    Diffie Hellman , 
-   ECC
+   ECC ,
+   Chinese remainder theorem
    
 
 
