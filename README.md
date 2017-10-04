@@ -13,12 +13,14 @@ Crypto projects in python, projects in  PyCharm community edition
    RC4  ,
    Feistel cipher ,
    Superincreasing Knapsac ,
-   Elliptic Curve Cryptography
+   Elliptic Curve Cryptography ,
+   Images manipulating pixels
    
 ### Implementations
    Diffie Hellman , 
    ECC ,
-   Chinese remainder theorem
+   Chinese remainder theorem ,
+   
    
 
 
