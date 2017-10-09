@@ -14,7 +14,8 @@ Crypto projects in python, projects in  PyCharm community edition
    Feistel cipher ,
    Superincreasing Knapsac ,
    Elliptic Curve Cryptography ,
-   Images manipulating pixels
+   Images manipulating pixels ,
+   Steganography
    
 ### Implementations
    Diffie Hellman , 
