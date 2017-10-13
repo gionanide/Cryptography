@@ -28,7 +28,7 @@ def factorNumber():
 	#divide tha same factor since the factor would be divisible by N. Why is neither factor divisible by N? ---- we 
 	#assume that (a**period/2+1)!=0modN and for the other we know that period is the minimum value of x such that 
 	#a**x == 1modN. So since p and q divide seperate factos ont he left side of the equation we can assume that p 
-	#divides (a**period/2 -1) and q divides (a**period/2 +1).
+	#divides (a**period/2 -1) and q divides (a**period/2 +1). Problems with huge numbers
 	print 'Factors are: ',p,q
 		
 	
