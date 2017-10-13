@@ -14,7 +14,11 @@ def factorNumber():
 		print 'This relative prime number does not satisfy the conditions \n'
 		a = randomRelativePrime(number)
 		period = computeThePeriod(number,a)
-	# (a**period)%number == 1 in order to check if everything is right, so it is means that ((a**period)-1)%number == 0, and from this we can conclude that a**period - 1 is a multiple of N(number). So a k exists that (a**period - 1 == k*N). Now because period is an even number we can write is as follow : (a**period/2 - 1)(a**period/2 + 1) = k*N and since N = p * q we can replace it. (a**period/2 - 1)(a**period/2 + 1) = k*p*q
+	# (a**period)%number == 1 in order to check if everything is right, so it is means that
+	#((a**period)-1)%number == 0, and from this we can conclude that a**period - 1 is a multiple of N(number). 
+	#So a k exists that (a**period - 1 == k*N). Now because period is an even number we can write is as follow : 
+	#(a**period/2 - 1)(a**period/2 + 1) = k*N and since N = p * q we can replace it. 
+	#(a**period/2 - 1)(a**period/2 + 1) = k*p*q
 
 	#Assumptions
 	p = gcd(a**(period/2) - 1,number)
