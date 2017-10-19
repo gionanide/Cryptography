@@ -1,0 +1,30 @@
+Trying to adjust this problem with the birthday paradox problem.\\
+the number of the people on earth is n =$ 7.5*10^{9}$
+we define event \{A\} as the event of finding 2 PGP keys with the same value.
+It is easier to find the possibility that all the people have different keys so P(A'). But we want P(A) so we find
+P(A) = 1 - P(A')\\
+
+So we are trying to compute P(A') = $(1/k)^n$    , generalized
+
+as n we have the number of the population of earth n = 7.5*$10^9$
+as k we have the possible PGP fingerprints. Analytically the PGP fingerprint consist of charachters(A-F) and numbers(0-9) so we have 6 charachters and 10 numbers as a total of 16. So the possible PGP fingerprints are $(16)^{40}$
+
+Assume $\varphi$ = $16^{40}$: \\
+
+P(A') = ( 1 / ($\varphi$) ) * ( $\varphi$/n ) * ( $\varphi$-1 / n ) * ( $\varphi$-2 / n ) *......( $\varphi$-n / n ) = $ \frac{1}{\varphi}^{n} $ * ( $\varphi$ * $\varphi$-1 * $\varphi$-2 *....* $\varphi$-n)\\
+
+We can continue the calculations:
+
+P(A') = 1* (1-1/$\varphi$) * (1-2/$\varphi$) *.....* (1- n-1/ $\varphi$) = ( $\varphi$ * $\varphi$-1 * $\varphi$-2 *.....* $\varphi$-n-1) / ($\varphi^n$) = ($\varphi$)! / ($\varphi^n$) * ($\varphi$-n)!\\
+This is the generalized mathematical type.
+We tried to make the calculations and the P(A') bearly touched the 1 so the result was a little above of zero. But because we had really big number as a dividors and it is now when you do number/(number which goes to infinity) = 0. Our results was only zero so we made the maths
+with the traditional way with pen and paper.\\
+
+We have 40 charachters and every hecademical charachter consists from 4 bytes . Because of this we have 40 * 4 = 160\\
+The combinations of the PGP figerprints are $2^{ 160}$ and we want at least two people have the same fingerprint(collision) so the number of key to compute to have an high
+probability of finding a collision is
+$(2 ^ {160})^ {1 / 2} = 2 ^ {80}$ . We tried to round the numbers here and just to make an approximate solution. We calculate that $2 ^{ 80} \simeq 10 ^ {25}$
+and $7,5 * 10^{ 9} \simeq 10 * 10^{ 9 } = 10^{10}$ and we use these numbers.\\
+
+P(A) = number of people in the earth / possible PGP fingerprints = $(10 ^ {10}) / (10 ^ {25}) = 10 ^ {-15}$ this number is so close to zero as we expected. This is an informal approach . But the point is that the possibility touches to zero and the possibility of no collision touches the 1.
+

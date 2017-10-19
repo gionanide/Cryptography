@@ -1,0 +1,21 @@
+A sha-256 hashing function fo a document D compute a hash value of length 256 bit, so we have $2^{256}$ different
+permutation in wicht the hash value can be output once we compute h(D) .
+\\Now we want to know how much time should we wait untill there is a 100$\%$ probability that we occurr in a collision if everyone in the
+world produce and sign a document every day (7*$10^{9}$ humans $\approxeq 10^{10} $).
+\\Let's work with this assumption, now we have to compute $2^{256}+1 $ different documents, (assuming the perfect hash function).
+$2^{256}$ different messages $ \approxeq  10^{85} $ different messages $\approxeq \frac{10^{85}}{10^{10}} = 10^{75}$ days needed to compute all this
+different documents, that are $3*10^{72}$ years.
+\\Now we want to know how many document D we have to compute such that there is an high probability (not 100$\%$) to have a collision.
+\\For this purpose we start from the Birthday paradox and apply the insight to our problem.
+So we know from the Birthday paradox that with N = 23 people we have a probability higher than 50$\%$ that 2 of them are born in the same day, so
+we stated with this one that in a hashing space of 365 we need $ \approxeq $ 23 elements to have an high probability of collision.
+From this we can easily see that for our problem we need much less documents Ds to be confident in finding a collision.\\
+Generalizing this problem we have that the probability to have a collision is equal to 1 - the probability to have no collision , so given a
+space of N=$2^{256}$ possible hash values and P=\#peopele-in-the-world * D (supposed different) the second day we should pick N-P hash values and so on.
+\\ In general, the probability of randomly generating P documents every day that are all unique is:
+  $\frac{N-1}{N} * \frac{N-2}{N} * \frac{N-3}{N} *$ .... $* \frac{N-(P-1)}{N}$.
+\\
+The above expression is approximable to $e^{\frac{-P(P-1)}{2N}} $. A more easy approximation is made up by seeing that every document should be different
+to each other so every day we need P(P-1)/2  $ \approxeq  P^{2}$ comparison.
+It follows that $\sqrt{N=2^{256}}= 2^{128}$ document in input leads to an high probabilty of collision, we have that $ 2^{128} \approxeq 10^{43} , 7,6 x 10^{9} \approxeq 10^{10} $
+so we need $\frac{10^{43}}{10^{10}} = 10^{33}$ days = $3*10^{30}$ years to generate such a number of different documents.
