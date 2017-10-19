@@ -7,7 +7,8 @@ Crypto projects in python, projects in  PyCharm community edition
    Hip Replacement  ,
    Vernam cipher  ,
    Zip Files ,
-   RSA
+   RSA ,
+   Telnet Protocol 
    
 ### Encryptions/Decryptions
    RC4  ,
@@ -18,7 +19,7 @@ Crypto projects in python, projects in  PyCharm community edition
    Steganography
    
 ### Implementations
-   Diffie Hellman , 
+   Diffie Hellman & EDF , 
    ECC ,
    Chinese remainder theorem ,
    
