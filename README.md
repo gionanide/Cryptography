@@ -21,7 +21,7 @@ Crypto projects in python, projects in  PyCharm community edition
 ### Implementations
    Diffie Hellman & EDF , 
    ECC ,
-   Chinese remainder theorem ,
+   Chinese remainder theorem 
    
    
 
