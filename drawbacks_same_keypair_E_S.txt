@@ -1,0 +1,11 @@
+Is always bad to use the same keypairs for do encryption/decryption and for signing documents. This is true for many reasons,
+first of all if Trudy in some ways retrieve an encrypted message $P_a\{M\}$ sent by Bob to Alice she then can pretend to be Bob
+ (typical Alice-Bob comunication scenario) and send to Alice a request for signing a document C that is indeed the previous encrypted message.
+ Now Alice dutyfully sign C with her private key and Trudy came up with the plaintext M. The same result (good one for Trudy ) can be reached
+ both via the public key encryption of a nonce either via private signing of a plain nonce because of from Alice's point of view the procedure is
+ the same. However this is a bad idea also for another reason : Key management .\\
+ Signature keys and encryption keys have different lifetime in terms of backups, access control, repudiation, etc. The fallback for a signature key in
+ case of a catastrophic event is to destroy it to avoid future forgeries, so a signature key does not need to be backed up extensively , and in case
+ of leak pre-existing documents still remain valid and signed by the trustworthy person and just the new ones has to be withdrawed.\\
+Conversely, the fallback for an encryption key is to keep it around to decrypt existing documents, so it needs to be backed up reliably, in case of a leak of an encryption key,
+ the confidentiality of all pre-existing documents is at risk, whereas new documents simply need to be encrypted with a different key.

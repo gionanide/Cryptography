@@ -1,0 +1,37 @@
+how can Trudy, working at the postal service, gain access to the box's contents without Alice or Bob noticing it?\\
+Attack : \\
+Alice send the box \textbf{b} to Bob with his lock , let's say A[b]. Now trudy intercept this box and sends back the box with also her own lock T[A[b]] to Alice.
+Since Alice wait for a box with 2 locks she did not notice nothing suspicious and remove her lock from the Box, so now the box has only Trudy's lock T[B].
+Now Trudy can open the Box and do his malicious things (i.e. copy or modify the content). Then Trudy lock the box again T[b] and send it to Bob that is
+waiting for a locked Box. Bob do not know that the lock he recieved is from Trudy so he lock the box with his own lock B[T[b]] and send it back to Alice.
+Finally Trudy recieve the Box and remove his own lock and send it back again to Bob that now can access the content of the Box.\\
+Neither Alice nor Bob knows about Trudy's access to the content of the Box.\\
+
+Alice ----- A[b] -----$>$ Trudy \\ Alice$<$----- T[A[b]]----- Trudy \\ Alice ----- T[b] -----$>$ Trudy \\ Trudy reads the content of b \\ Trudy ----- T[b] -----$>$ Bob \\
+Trudy $<$----- B[T[b]] ----- Bob \\ Trudy ----- B[b] -----$>$ Bob
+\textbf{Q:} What must be done to prevent Trudy from gaining access to the box's contents?\\
+
+Bob or/and Alice has to verify that the first box comes from the right sender. but How to do this? \\
+Alice and Bob have to add to the previous protocol a secret. Infact if Bob and Alice share a secret let's say $K_{ab}$ (they can gain this secret in several ways)
+then they can use the box for writing their authentication protocol. The new protocol work in this way:\\
+Alice write on the box a nonce $R_A$ , then Bob writes on the same box E( Bob,$R_A$,$K_{ab}$), $R_B$. Alice finally writes back to Bob (on the box)
+E(Alice,$R_B$,$K_ab$). This protocol prevent Trudy's access to the content of the box because she cannot reply the right message on the box since
+she don't know the shared key.
+
+
+\section*{Excercise 33}
+What is required to do proper authentication?\\
+To do proper authentication is required that Alice (so the user, me ) has to verify and check the signature of
+the certificate. So when a popup or just a warning comes up Alice must not ignore it and take the right precautions.Not skip it. \\
+meaning of doing authientication:\\
+In technology terms, it refers to a client (web browser or client application) authenticating themselves to a server (website or server application)
+ and that server also authenticating itself to the client through verifying the public key certificate/digital certificate issued by the trusted
+ Certificate Authorities (CAs).\\
+ Is https://security.rug.nl properly authenticating itself? How and why if so?\\
+ the answer is yes. Now we explain why and how:\\
+ \textbf{Why: } security.rug.nl authentication is checked by the openSSL tool in Linux whìch turn a OK code.\\
+ \textbf{How: } In SSL authentication, the client is presented with a server’s certificate, the client computer might try to match the server’s CA against the client’s
+  list of trusted CAs. If the issuing CA is trusted, the client will verify that the certificate is authentic and has not been tampered with.
+  This is done by 9 main steps.
+ I found a nice explanation in www.codeproject.com/Articles/326574/An-Introduction-to-Mutual-SSL-Authentication , so the main steps of how
+ a server auth himself to a client are:

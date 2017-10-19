@@ -1,0 +1,6 @@
+The added value of having a secure shared key K between two endpoints in DH key exchange procedure is that now
+the attacker cannot perform a MiTM attack against one (or both) of them. Infact if Trudy (the attacker) is able to
+intercept a message e.g. $g^{a} mod p$  in the comunication she/he can then act as one of the two legitimate point of the comunication.
+Then he/she send this message to Bob pretending to be Alice , Bob reply with his own part of the secret $g^{b} mod p $ , now Trudy
+can compute the shared secret. If instead of the previous scenario Bob and Alice encrypt their messages with a secure shared key Trudy
+is no longer able to perform a reply attack against them because he/she cannot come up with the shared secret because of the encryption.

@@ -1,0 +1,53 @@
+Break a 64-bit cryptographic key:
+
+		As an average a 64-bit cryptographic key is broken after $2^{63}$ attemps, so this is tha average scenario but as the worst scenario we consider that a cryptographic key is broken is $2^{64}$ attemps. This means we check all the possible combinations of 64-bit cryptographic keys.
+
+1) Worst case scenario when a key is broken in $2^{64}$ attempts:
+
+	I need to break this key slightly more than three weeks, so i take as an upper bound exactly three weeks.
+	3 weeks = 1814400 sec
+	$2^{x} = 1814400 => \log_2 2^{x} = {\log_2 1814400} => x = {\log_2 1814400} = 20,7910611.$ So x $=~ 21$, result: 3 weeks = $2^{21}$ seconds.
+
+	Worst case scenario : attempts / (determine how many calculations i want to break the key) = (the time i want to break the key)
+				$(2^{64}) / x = (2^{21}) => x = (2^{43})$ calculations/per second I need to break the cryptographic key in  																3 weeks.
+
+
+	A) When you can rent servers for the required amount of time
+
+		I assume that we need 1 cycle for one calculation , so one sarver can provide us  ($2 ^{38}$) cycles/sec so calculations pre 		second. Now I am going to find how many servers I need.
+
+	$(2^{38}) * x = (2^{43}) => x = (2^{5})$ server I am going to need . I know that one server costs 250 euros per year, but I only 		need the servers for 3 weeks . So server's cost for 3 weeks is $x = 250 * (21/365) = 14,38$ euros a server
+	Amount = $14,38 * (2^{5}) = 460,16$ euros
+
+
+	B) When you must rent servers using contracts that are valid for a year.
+
+		One year  = 31556952 seconds = $2^{25}$ seconds
+		$(2^{64}) / x = (2^{25}) => x = 2^{39}$ calculations pre second in order to break the key in one year.
+
+		How many servers i want: $2^{38} * x = 2^{39} => x = 2^{1} = 2$ servers
+		Amount$ = 2 * 250 = 500$ euros
+
+
+2) Average case when the key is broken in $2^{63}$ attempts:
+
+			I need to break this key slightly more than three weeks, so i take as an upper bound exactly three weeks.
+			3 weeks = $2^{21}$ (same procedure) seconds.
+			$(2^{63}) / x = 2^{21} => x = 2^{42}$ calculations/per second I need to break the cryptographic key in 3 weeks.
+
+
+		A) When you can rent servers for the required amount of time
+
+		I assume that we need 1 cycle for one calculation , so one sarver can provide us  $2^{38}$ cycles/sec so calculations pre 				second. Now I am going to find how many servers I need.
+
+		$(2^{38}) * x = 2^{42} => x = 2^{4}$ server I am going to need .
+		Amount $ = 14,38 * (2^{4}) = 230,08$ euros
+
+
+	B) When you must rent servers using contracts that are valid for a year.
+
+		One year  = 31556952 seconds = $2^{25}$ seconds
+		$(2^{63}) / x = (2^{25}) => x = (2^{38})$ calculations pre second in order to break the key in one year.
+
+		How many servers i want: $(2^{38}) * x = (2^{38}) => x = 2^{0} = 1$ servers
+		Amount$ = 1 * 250 = 250$ euros
