@@ -5,6 +5,7 @@ import hashlib
 
 def RepresentsInt(s):
     try: 
+	#check if a number is either integer (True) or float (False)
         int(s)
         return True
     except ValueError:
@@ -13,6 +14,7 @@ def RepresentsInt(s):
 
 def onlyBytes(listA):
 	listB=[]
+	#represent a sequence or a string or a number to only bytes
 	for x in listA:
 		if not(RepresentsInt(x)):
 			pass
@@ -54,15 +56,17 @@ def initialize(text,key):
 	e=0
 	key  = convertText(key)
 	text = convertText(text)
-	#textBytes = onlyBytes(textBytes)
-	#keyBytes = onlyBytes(keyBytes)
-	#print 'The text in bytes: ',textBytes,'\n'
-	'''for x in range(len(text)%8):
+	#just to check 
+	textBytes = onlyBytes(textBytes)
+	keyBytes = onlyBytes(keyBytes)
+	print 'The text in bytes: ',textBytes,'\n'
+	for x in range(len(text)%8):
 	
 		textLetterBytes.append(textBytes[e:e+8])
 		e+=8
-	print textLetterBytes'''
+	print textLetterBytes
 	
+	#random key stream in order to randomize the procedure
 	S = KSA(key)
 	random=[]
 	for x in range(257):
