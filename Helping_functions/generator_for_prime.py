@@ -1,4 +1,4 @@
-
+#an egnine for generating prime factors
 def prime_factors(n):
     primfac = []
     d = 2
