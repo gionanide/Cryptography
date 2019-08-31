@@ -27,6 +27,6 @@ Crypto projects in python, projects in  PyCharm community edition
    
 #### Authors
 
-@gionanide  @FrancescoSegala
+Emmanouil Gionanidis ([@gionanide](https://github.com/gionanide))  Francesco Segala ([@FrancescoSegala](https://github.com/FrancescoSegala))
    
  
